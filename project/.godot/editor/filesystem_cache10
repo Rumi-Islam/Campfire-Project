@@ -1,0 +1,8 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1772322281
+enemy.gd::GDScript::6191503563700343332::1772322217::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::7643214278835964447::1772322217::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg
+icon.svg::CompressedTexture2D::8572159100310012052::1772322217::1772322282::1::::<><><>0<>0<>fb2578f7ab1c104d5a90c6d4c09f49af<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::8634161130590243005::1772322217::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg<>uid://cuhhfn6ouwiau::::res://enemy.gd<>uid://fa5fhwbdck55::::res://player.gd
+player.gd::GDScript::352775058641364130::1772322217::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.tscn::PackedScene::6318562659220458090::1772322217::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg
