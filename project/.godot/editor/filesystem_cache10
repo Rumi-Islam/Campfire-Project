@@ -1,0 +1,16 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1772387724
+enemy.gd::GDScript::6191503563700343332::1772322503::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::7643214278835964447::1772322503::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg
+ground.png::CompressedTexture2D::3571788297613385736::1772329416::1772329451::1::::<><><>0<>0<>ecf32d2c312d4567855f9e63a857f5b4<>res://.godot/imported/ground.png-19dd19062ae149a099889071e7b87881.s3tc.ctex::
+icon.svg::CompressedTexture2D::8572159100310012052::1772322503::1772323825::1::::<><><>0<>0<>52292ede159a06791306ff5be75d15c2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
+main3d.tscn::PackedScene::7031025553267257546::1772384036::0::1::::<><><>0<>0<><>::uid://rulr505spiub::::res://sewerfloor.tres<>uid://c58q7hftjdvbo::::res://piperoom.gd<>uid://bq1rs84apblbo::::res://meteal.tres<>uid://bq5g3jeak8g7i::::res://ground.png<>uid://bmid7hofqprif::::res://mettal.png
+main.tscn::PackedScene::8634161130590243005::1772355201::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg<>uid://cuhhfn6ouwiau::::res://enemy.gd<>uid://fa5fhwbdck55::::res://player.gd
+mapGenerator.gd::GDScript::1372950305293360534::1772381164::0::1::::<>Node<><>0<>0<><>::
+map_traveller.gd::GDScript::6635613757072589473::1772387623::0::1::::<>Node<><>0<>0<><>::
+meteal.tres::StandardMaterial3D::3564182114764471316::1772333088::0::1::::<><><>0<>0<><>::uid://bmid7hofqprif::::res://mettal.png
+mettal.png::CompressedTexture2D::3245441515305104753::1772331181::1772331243::1::::<><><>0<>0<>67163ba71bf35dd6524f89f7dc9c2e19<>res://.godot/imported/mettal.png-897c0f85b7f90c28c3bb3e7abffc3a9a.s3tc.ctex::
+piperoom.gd::GDScript::6947660135963281740::1772387090::0::1::::<>Node3D<><>0<>0<><>::
+player.gd::GDScript::352775058641364130::1772322503::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.tscn::PackedScene::6318562659220458090::1772322503::0::1::::<><><>0<>0<><>::uid://dueohcohekhw3::::res://icon.svg
+sewerfloor.tres::StandardMaterial3D::1235197758052891361::1772333148::0::1::::<><><>0<>0<><>::uid://bq5g3jeak8g7i::::res://ground.png

@@ -1,0 +1,369 @@
+[gd_scene format=3 uid="uid://c7f47068t2vxa"]
+
+[ext_resource type="Material" uid="uid://rulr505spiub" path="res://sewerfloor.tres" id="1_fxs24"]
+[ext_resource type="Script" uid="uid://c58q7hftjdvbo" path="res://piperoom.gd" id="1_j8wvp"]
+[ext_resource type="Material" uid="uid://bq1rs84apblbo" path="res://meteal.tres" id="2_fxs24"]
+[ext_resource type="Texture2D" uid="uid://bq5g3jeak8g7i" path="res://ground.png" id="3_pmjbp"]
+[ext_resource type="Texture2D" uid="uid://bmid7hofqprif" path="res://mettal.png" id="3_tvsrp"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j8wvp"]
+panorama = ExtResource("3_pmjbp")
+
+[sub_resource type="Sky" id="Sky_tvsrp"]
+sky_material = SubResource("PanoramaSkyMaterial_j8wvp")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_fxs24"]
+background_mode = 2
+background_color = Color(0.133172, 0.3735029, 0, 1)
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_tvsrp")
+ambient_light_source = 1
+ambient_light_color = Color(0.120415084, 0.35688475, 0, 1)
+ambient_light_sky_contribution = 0.9
+tonemap_exposure = 1.76
+glow_enabled = true
+glow_intensity = 0.4
+glow_bloom = 0.1
+fog_enabled = true
+fog_light_color = Color(0.19448, 0.26, 0.07279999, 1)
+fog_density = 0.006
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j8wvp"]
+viewport_path = NodePath("Player/Map/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ih0mi"]
+line_spacing = 2.0
+font_size = 56
+font_color = Color(0.07444572, 0.07444573, 0.07444573, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 16
+shadow_color = Color(1, 1, 1, 0.14509805)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tvsrp"]
+viewport_path = NodePath("Player/TravelIndicator/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6lewv"]
+line_spacing = 2.0
+font_size = 128
+font_color = Color(0, 0.4, 0.013333321, 1)
+outline_size = 24
+outline_color = Color(2.695322e-06, 0.731954, 0, 1)
+shadow_size = 0
+shadow_color = Color(1, 1, 1, 0.14509805)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fxs24"]
+resource_local_to_scene = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8wvp"]
+albedo_texture = ExtResource("3_pmjbp")
+metallic_specular = 0.0
+roughness_texture = ExtResource("3_pmjbp")
+normal_enabled = true
+ao_on_uv2 = true
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+proximity_fade_distance = 2.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="PrismMesh" id="PrismMesh_sk41h"]
+left_to_right = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_j8wvp"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_sk41h"]
+inner_radius = 4.5
+outer_radius = 6.5
+rings = 32
+ring_segments = 16
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fxs24"]
+top_radius = 6.0
+bottom_radius = 6.0
+radial_segments = 32
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmjbp"]
+albedo_color = Color(0.02269988, 0.039750464, 0.013633016, 1)
+metallic_specular = 0.2
+roughness = 0.0
+
+[node name="Node3D" type="Node3D" unique_id=1848622525]
+script = ExtResource("1_j8wvp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1021422085]
+environment = SubResource("Environment_fxs24")
+
+[node name="Player" type="Node3D" parent="." unique_id=316033828]
+
+[node name="Camera" type="Camera3D" parent="Player" unique_id=93161643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+fov = 80.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Player" unique_id=893478722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 6)
+light_color = Color(0.9411765, 0.9019608, 0.78431374, 1)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 2.0
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 1.0
+shadow_normal_bias = 0.0
+shadow_reverse_cull_face = true
+shadow_transmittance_bias = 0.0
+shadow_blur = 2.0
+distance_fade_enabled = true
+spot_range = 40.0
+spot_attenuation = 2.0
+spot_angle = 35.0
+
+[node name="Map" type="Sprite3D" parent="Player" unique_id=785539992]
+transform = Transform3D(0.6, 0, 0, 0, 0.29999998, 0.5196153, 0, -0.5196153, 0.29999998, 0, 5, -2)
+texture = SubResource("ViewportTexture_j8wvp")
+
+[node name="SubViewport" type="SubViewport" parent="Player/Map" unique_id=1170978670]
+
+[node name="Control" type="Control" parent="Player/Map/SubViewport" unique_id=1670523012]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(256, 256)
+
+[node name="TextureRect" type="TextureRect" parent="Player/Map/SubViewport/Control" unique_id=581956268]
+texture_filter = 1
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+pivot_offset = Vector2(256, 256)
+texture = ExtResource("3_tvsrp")
+
+[node name="Display" type="Control" parent="Player/Map/SubViewport/Control" unique_id=2089918999]
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 498.0
+offset_bottom = 498.0
+pivot_offset = Vector2(256, 256)
+
+[node name="Label" type="Label" parent="Player/Map/SubViewport/Control" unique_id=885509367]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 128.0
+pivot_offset = Vector2(256, 256)
+text = "MAP"
+label_settings = SubResource("LabelSettings_ih0mi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Player/Map/SubViewport/Control" unique_id=2091617843]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+pivot_offset = Vector2(256, 256)
+color = Color(0.12005129, 0.12005124, 0.12005126, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Player/Map/SubViewport/Control" unique_id=1240839029]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+rotation = 3.1415927
+pivot_offset = Vector2(256, 256)
+color = Color(0.12005129, 0.12005124, 0.12005126, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Player/Map/SubViewport/Control" unique_id=951323132]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+rotation = 1.5707964
+pivot_offset = Vector2(256, 256)
+color = Color(0.12005129, 0.12005124, 0.12005126, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Player/Map/SubViewport/Control" unique_id=554955318]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+rotation = -1.5707964
+pivot_offset = Vector2(256, 256)
+color = Color(0.12005129, 0.12005124, 0.12005126, 1)
+
+[node name="TravelIndicator" type="Sprite3D" parent="Player" unique_id=452652547]
+transform = Transform3D(0.7, 0, 0, 0, 0.3477333, -0.25881904, 0, 0.09317485, 0.9659258, 0, 10, -7)
+texture = SubResource("ViewportTexture_tvsrp")
+
+[node name="SubViewport" type="SubViewport" parent="Player/TravelIndicator" unique_id=1137693201]
+
+[node name="Control" type="Control" parent="Player/TravelIndicator/SubViewport" unique_id=1316393082]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(256, 256)
+
+[node name="TextureRect" type="TextureRect" parent="Player/TravelIndicator/SubViewport/Control" unique_id=1798355450]
+texture_filter = 1
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("3_tvsrp")
+
+[node name="Label" type="Label" parent="Player/TravelIndicator/SubViewport/Control" unique_id=1432449413]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+scale = Vector2(1, 2)
+pivot_offset = Vector2(256, 256)
+text = "GO (W)"
+label_settings = SubResource("LabelSettings_6lewv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Player/TravelIndicator/SubViewport/Control" unique_id=2072614728]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 24.0
+pivot_offset = Vector2(256, 256)
+color = Color(0.007843138, 0.93333334, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Player/TravelIndicator/SubViewport/Control" unique_id=963410120]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 24.0
+rotation = 3.1415927
+pivot_offset = Vector2(256, 256)
+color = Color(0.007843138, 0.93333334, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Player/TravelIndicator/SubViewport/Control" unique_id=1626024065]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+rotation = 1.5707964
+pivot_offset = Vector2(256, 256)
+color = Color(0.007843138, 0.93333334, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Player/TravelIndicator/SubViewport/Control" unique_id=639853570]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 12.0
+rotation = -1.5707964
+pivot_offset = Vector2(256, 256)
+color = Color(0.007843138, 0.93333334, 0, 1)
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1833506970]
+transform = Transform3D(24, 0, 0, 0, 1, 0, 0, 0, 24, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = SubResource("StandardMaterial3D_j8wvp")
+
+[node name="Wall" type="MeshInstance3D" parent="." unique_id=114629828]
+transform = Transform3D(24, 0, 0, 0, 12, 0, 0, 0, 1, 0, 6, -12.5)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = ExtResource("1_fxs24")
+
+[node name="Wall2" type="MeshInstance3D" parent="." unique_id=2006520123]
+transform = Transform3D(24, 0, 0, 0, 12, 0, 0, 0, 1, 0, 6, 12.5)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = ExtResource("1_fxs24")
+
+[node name="Wall3" type="MeshInstance3D" parent="." unique_id=1727690353]
+transform = Transform3D(1, 0, 0, 0, 12, 0, 0, 0, 24, 12.5, 6, 0)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = ExtResource("1_fxs24")
+
+[node name="Wall4" type="MeshInstance3D" parent="." unique_id=225932069]
+transform = Transform3D(1, 0, 0, 0, 12, 0, 0, 0, 24, -12.5, 6, 0)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = ExtResource("1_fxs24")
+
+[node name="Ceiling" type="MeshInstance3D" parent="." unique_id=82613848]
+transform = Transform3D(24, 0, 0, 0, 1, 0, 0, 0, 24, 0, 12.5, 0)
+mesh = SubResource("BoxMesh_fxs24")
+surface_material_override/0 = ExtResource("1_fxs24")
+
+[node name="Wall5" type="MeshInstance3D" parent="." unique_id=1340631683]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -12, 0, 4, -5.2453663e-07, 10, 6, -10)
+mesh = SubResource("PrismMesh_sk41h")
+surface_material_override/0 = ExtResource("1_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Wall6" type="MeshInstance3D" parent="." unique_id=305689906]
+transform = Transform3D(-4, -6.039832e-07, -7.920283e-14, 0, -1.7484555e-07, 12, -6.039832e-07, 4, 5.2453663e-07, -10, 6, -10)
+mesh = SubResource("PrismMesh_sk41h")
+surface_material_override/0 = ExtResource("1_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Wall7" type="MeshInstance3D" parent="." unique_id=2041964123]
+transform = Transform3D(-4, -6.039832e-07, 7.920283e-14, 0, -1.7484555e-07, -12, 6.039832e-07, -4, 5.2453663e-07, -10, 6, 10.000001)
+mesh = SubResource("PrismMesh_sk41h")
+surface_material_override/0 = ExtResource("1_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Wall8" type="MeshInstance3D" parent="." unique_id=586478043]
+transform = Transform3D(4, -3.496911e-07, -4.5856453e-14, 0, -1.7484555e-07, 12, -3.496911e-07, -4, -5.2453663e-07, 10, 6, 9.999999)
+mesh = SubResource("PrismMesh_sk41h")
+surface_material_override/0 = ExtResource("1_fxs24")
+metadata/_edit_group_ = true
+
+[node name="MapPart" type="MeshInstance3D" parent="." unique_id=2001399085]
+transform = Transform3D(1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, -1, -4.371139e-08, 0, 100, 0)
+mesh = SubResource("BoxMesh_j8wvp")
+surface_material_override/0 = ExtResource("1_fxs24")
+metadata/_edit_group_ = true
+
+[node name="PipeS" type="MeshInstance3D" parent="." unique_id=189631430]
+transform = Transform3D(1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, -1, -4.371139e-08, 0, 6, 10)
+visible = false
+mesh = SubResource("TorusMesh_sk41h")
+surface_material_override/0 = ExtResource("2_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Inner" type="MeshInstance3D" parent="PipeS" unique_id=2014755467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0)
+mesh = SubResource("CylinderMesh_fxs24")
+surface_material_override/0 = SubResource("StandardMaterial3D_pmjbp")
+metadata/_edit_group_ = true
+
+[node name="PipeN" type="MeshInstance3D" parent="." unique_id=1200483127]
+transform = Transform3D(-1, 1.7484555e-07, 7.642742e-15, 0, -4.371139e-08, 1, 1.7484555e-07, 1, 4.371139e-08, 0, 6, -10)
+visible = false
+mesh = SubResource("TorusMesh_sk41h")
+surface_material_override/0 = ExtResource("2_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Inner" type="MeshInstance3D" parent="PipeN" unique_id=1338644768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0)
+mesh = SubResource("CylinderMesh_fxs24")
+surface_material_override/0 = SubResource("StandardMaterial3D_pmjbp")
+metadata/_edit_group_ = true
+
+[node name="PipeW" type="MeshInstance3D" parent="." unique_id=669378206]
+transform = Transform3D(4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, -4.371139e-08, -1.9106855e-15, -10, 6, -3.496911e-07)
+visible = false
+mesh = SubResource("TorusMesh_sk41h")
+surface_material_override/0 = ExtResource("2_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Inner" type="MeshInstance3D" parent="PipeW" unique_id=859471409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7484558e-07, -2.5, 0)
+mesh = SubResource("CylinderMesh_fxs24")
+surface_material_override/0 = SubResource("StandardMaterial3D_pmjbp")
+metadata/_edit_group_ = true
+
+[node name="PipeE" type="MeshInstance3D" parent="." unique_id=873912292]
+transform = Transform3D(-1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 1.3113416e-07, 5.7320566e-15, 10, 6, 3.496911e-07)
+visible = false
+mesh = SubResource("TorusMesh_sk41h")
+surface_material_override/0 = ExtResource("2_fxs24")
+metadata/_edit_group_ = true
+
+[node name="Inner" type="MeshInstance3D" parent="PipeE" unique_id=1524660144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7484558e-07, -2.5, 0)
+mesh = SubResource("CylinderMesh_fxs24")
+surface_material_override/0 = SubResource("StandardMaterial3D_pmjbp")
+metadata/_edit_group_ = true

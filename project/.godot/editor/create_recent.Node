@@ -1,0 +1,15 @@
+Button
+ColorRect
+Control
+TextureRect
+Label
+Sprite3D
+SubViewport
+CharacterBody3D
+StaticBody3D
+Node3D
+WorldEnvironment
+SpotLight3D
+DirectionalLight3D
+MeshInstance3D
+CollisionShape3D

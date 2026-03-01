@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Project"
-run/main_scene="uid://dvapmwpagc75r"
+run/main_scene="uid://c7f47068t2vxa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+mapGenerator="*uid://ttcj5laowfm1"
+mapTraveller="*uid://c1slubaepupcr"
 
 [physics]
 

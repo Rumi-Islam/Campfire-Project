@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rulr505spiub"]
+
+[ext_resource type="Texture2D" uid="uid://bq5g3jeak8g7i" path="res://ground.png" id="1_p4vn0"]
+
+[resource]
+albedo_texture = ExtResource("1_p4vn0")
+metallic_specular = 0.0
+roughness_texture = ExtResource("1_p4vn0")
+normal_enabled = true
+ao_on_uv2 = true
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+proximity_fade_distance = 2.0
+distance_fade_max_distance = 0.0
