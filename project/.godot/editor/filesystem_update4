@@ -1,3 +1,7 @@
 res://map_traveller.gd
 res://mapGenerator.gd
 res://piperoom.gd
+res://player.gd
+res://meteal.tres
+res://sewerfloor.tres
+res://main3d.tscn
