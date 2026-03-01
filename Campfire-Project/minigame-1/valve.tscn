@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cgqq5xvrlag0t"]
+
+[ext_resource type="Script" uid="uid://dndptroy47hmp" path="res://valve.gd" id="1_h7264"]
+[ext_resource type="Texture2D" uid="uid://dyrjcg4kxr2i8" path="res://New Piskel-1.png.png" id="2_85wf7"]
+
+[node name="Valve" type="Node2D" unique_id=1851992538]
+script = ExtResource("1_h7264")
+
+[node name="CircleSprite" type="Sprite2D" parent="." unique_id=1689104723]
+position = Vector2(0, 3.8146973e-06)
+scale = Vector2(4.90625, 4.90625)
+texture = ExtResource("2_85wf7")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1650556440]
+offset_left = -178.0
+offset_top = 133.0
+offset_right = 181.0
+offset_bottom = 160.0
