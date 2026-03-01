@@ -54,8 +54,12 @@ func _input(event):
 		if randf() > 0.4:
 			if randf() > 0.5:
 				get_tree().change_scene_to_file("res://main.tscn")
+				await get_tree().create_timer(1).timeout
+				minigameEnd(true)
 			else:
 				get_tree().change_scene_to_file("res://main.tscn")
+				await get_tree().create_timer(1).timeout
+				minigameEnd(true)
 		else:
 			minigameEnd(true)
 

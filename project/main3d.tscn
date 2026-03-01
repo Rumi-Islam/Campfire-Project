@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c7f47068t2vxa"]
+[gd_scene format=3 uid="uid://cnileufcp1fnp"]
 
 [ext_resource type="Material" uid="uid://rulr505spiub" path="res://sewerfloor.tres" id="1_fxs24"]
 [ext_resource type="Script" uid="uid://c58q7hftjdvbo" path="res://piperoom.gd" id="1_j8wvp"]
