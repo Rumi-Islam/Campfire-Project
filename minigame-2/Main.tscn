@@ -1,0 +1,283 @@
+[gd_scene format=3 uid="uid://b727qi68l8tnd"]
+
+[ext_resource type="Texture2D" uid="uid://5vitwn7autfh" path="res://New Piskel-1.png (4).png" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://pmwxyhppf8ga" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://c63odb8vqbde" path="res://New Piskel-2.png.png" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://bwq0pcoalu15e" path="res://New Piskel-3.png.png" id="4_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://dc4g627bysadu" path="res://New Piskel-4.png.png" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://b5ufgpds5id7g" path="res://New Piskel-5.png.png" id="6_3dxm6"]
+
+[node name="Node2D" type="Node2D" unique_id=414175709]
+script = ExtResource("1_uu6xs")
+
+[node name="Buttons" type="Node2D" parent="." unique_id=216256998]
+position = Vector2(463, 222)
+scale = Vector2(2, 2)
+
+[node name="Button" type="Control" parent="Buttons" unique_id=2035103601]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 15.0
+offset_bottom = 15.0
+
+[node name="Button" type="Button" parent="Buttons/Button" unique_id=666481730]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "1"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button" unique_id=1728521471]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button9" type="Control" parent="Buttons" unique_id=313872825]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 79.0
+offset_top = 79.0
+offset_right = 79.0
+offset_bottom = 79.0
+
+[node name="Button9" type="Button" parent="Buttons/Button9" unique_id=893849153]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "9"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button9" unique_id=1132369565]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button8" type="Control" parent="Buttons" unique_id=1908232715]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 79.0
+offset_right = 47.0
+offset_bottom = 79.0
+
+[node name="Button8" type="Button" parent="Buttons/Button8" unique_id=40951470]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "8"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button8" unique_id=425758840]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button7" type="Control" parent="Buttons" unique_id=1067840112]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 79.0
+offset_right = 15.0
+offset_bottom = 79.0
+
+[node name="Button7" type="Button" parent="Buttons/Button7" unique_id=2006903133]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "7"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button7" unique_id=1078097499]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button6" type="Control" parent="Buttons" unique_id=2117884645]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 79.0
+offset_top = 47.0
+offset_right = 79.0
+offset_bottom = 47.0
+
+[node name="Button6" type="Button" parent="Buttons/Button6" unique_id=1413220337]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "6"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button6" unique_id=141282186]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button5" type="Control" parent="Buttons" unique_id=158425713]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 47.0
+offset_right = 47.0
+offset_bottom = 47.0
+
+[node name="Button5" type="Button" parent="Buttons/Button5" unique_id=1195130618]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "5"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button5" unique_id=49298938]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button4" type="Control" parent="Buttons" unique_id=463722916]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 47.0
+offset_right = 15.0
+offset_bottom = 47.0
+
+[node name="Button4" type="Button" parent="Buttons/Button4" unique_id=121728659]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "4"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button4" unique_id=1278211436]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button3" type="Control" parent="Buttons" unique_id=1920325390]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 79.0
+offset_top = 15.0
+offset_right = 79.0
+offset_bottom = 15.0
+
+[node name="Button3" type="Button" parent="Buttons/Button3" unique_id=1684298168]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "3"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button3" unique_id=44904682]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="Button2" type="Control" parent="Buttons" unique_id=1592194308]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 15.0
+offset_right = 47.0
+offset_bottom = 15.0
+
+[node name="Button2" type="Button" parent="Buttons/Button2" unique_id=1589501724]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+text = "2"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Button2" unique_id=201170051]
+z_index = -3
+texture = ExtResource("1_glv2v")
+
+[node name="ColorRect" type="Node2D" parent="." unique_id=103282067]
+position = Vector2(366, 160)
+
+[node name="NewPiskel2_png" type="Sprite2D" parent="ColorRect" unique_id=103727893]
+z_index = 3
+position = Vector2(175, 132)
+scale = Vector2(6.875, 6.09375)
+texture = ExtResource("3_r0du0")
+
+[node name="NewPiskel5_png3" type="Sprite2D" parent="ColorRect" unique_id=1037587548]
+position = Vector2(176, 141.99998)
+scale = Vector2(4.015625, 7.9375)
+texture = ExtResource("6_3dxm6")
+
+[node name="ColorRect2" type="Node2D" parent="." unique_id=249770927]
+
+[node name="NewPiskel2_png" type="Sprite2D" parent="ColorRect2" unique_id=298402646]
+z_index = 4
+position = Vector2(550.5, 301.99997)
+scale = Vector2(6.875, 6.09375)
+texture = ExtResource("4_cm0pq")
+
+[node name="NewPiskel5_png2" type="Sprite2D" parent="ColorRect2" unique_id=848606455]
+position = Vector2(552.5, 305)
+scale = Vector2(4.015625, 7.9375)
+texture = ExtResource("6_3dxm6")
+
+[node name="Clue" type="Button" parent="." unique_id=1661403457]
+offset_left = 1095.0
+offset_top = 587.0
+offset_right = 1135.0
+offset_bottom = 627.0
+flat = true
+
+[node name="NewPiskel4_png" type="Sprite2D" parent="Clue" unique_id=1745258212]
+position = Vector2(22, 23)
+texture = ExtResource("5_fos0i")
+
+[node name="ColorRect3" type="Node2D" parent="." unique_id=1230785965]
+
+[node name="Label" type="Label" parent="ColorRect3" unique_id=876208453]
+z_index = 4
+offset_left = 399.0
+offset_top = 237.0
+offset_right = 693.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Tjhe code is"
+
+[node name="Buttonclue" type="Button" parent="ColorRect3" unique_id=168109284]
+offset_left = 332.0
+offset_top = 185.0
+offset_right = 759.0
+offset_bottom = 422.0
+flat = true
+
+[node name="NewPiskel5_png" type="Sprite2D" parent="ColorRect3" unique_id=2018979469]
+position = Vector2(546, 303)
+scale = Vector2(6.578125, 7.25)
+texture = ExtResource("6_3dxm6")
+
+[node name="NewPiskel5_png" type="Sprite2D" parent="." unique_id=1969781603]
+z_index = -5
+position = Vector2(556, 316)
+scale = Vector2(5.6328115, 11.015625)
+texture = ExtResource("6_3dxm6")
+
+[connection signal="pressed" from="Buttons/Button/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buttons/Button9/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Buttons/Button8/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Buttons/Button7/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Buttons/Button6/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Buttons/Button5/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Buttons/Button4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Buttons/Button3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/Button2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Clue" to="." method="_on_clue_pressed"]
+[connection signal="pressed" from="ColorRect3/Buttonclue" to="." method="_on_buttonclue_pressed"]
