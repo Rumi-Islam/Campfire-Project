@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cnouov137n1b7"]
+
+[ext_resource type="Script" uid="uid://dpu0bb3jcqaiu" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://cgqq5xvrlag0t" path="res://valve.tscn" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://co25eip825w2r" path="res://New Piskel-1.png (2).png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://4ousd1tt74wy" path="res://New Piskel-1.png (3).png" id="4_0hol4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=807068454]
+script = ExtResource("1_0e48y")
+
+[node name="Valve" parent="." unique_id=1851992538 instance=ExtResource("1_wtcfe")]
+position = Vector2(-241, -29)
+
+[node name="Valve2" parent="." unique_id=766015466 instance=ExtResource("1_wtcfe")]
+position = Vector2(4, 31)
+
+[node name="Valve3" parent="." unique_id=2080933251 instance=ExtResource("1_wtcfe")]
+position = Vector2(243, -24)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=980208888]
+offset_left = -268.0
+offset_top = -231.0
+offset_right = 269.0
+offset_bottom = -204.0
+max_value = 300.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=515802554]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1011511549]
+monitoring = false
+monitorable = false
+
+[node name="NewPiskel1_png(2)" type="Sprite2D" parent="Area2D" unique_id=1991269238]
+z_index = -3
+position = Vector2(-241, -30.000004)
+scale = Vector2(3.9140625, 5.7968745)
+texture = ExtResource("3_epypp")
+
+[node name="NewPiskel1_png(2)3" type="Sprite2D" parent="Area2D" unique_id=1886134316]
+z_index = -3
+position = Vector2(244, -25)
+scale = Vector2(3.9140625, 5.7968745)
+texture = ExtResource("3_epypp")
+
+[node name="NewPiskel1_png(2)2" type="Sprite2D" parent="Area2D" unique_id=1405215621]
+z_index = -2
+position = Vector2(3, 33)
+scale = Vector2(3.9140625, 5.7968745)
+texture = ExtResource("3_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=926269133]
+position = Vector2(-415, 17)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="NewPiskel1_png(3)" type="Sprite2D" parent="Area2D" unique_id=571949033]
+z_index = -6
+position = Vector2(9, 3)
+scale = Vector2(1.1278212, 1.1485339)
+texture = ExtResource("4_0hol4")
