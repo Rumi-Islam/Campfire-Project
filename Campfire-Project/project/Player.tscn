@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cwa02lijoa5so"]
+
+[ext_resource type="Texture2D" uid="uid://dueohcohekhw3" path="res://icon.svg" id="1_xhfnw"]
+
+[sub_resource type="GDScript" id="GDScript_kpjcp"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+@onready var enemy = $Enemy
+func _ready() -> void:
+	enemy.player_died.connect(_on_player_died)
+	
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+
+
+func _on_player_died():
+	die()
+
+func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+	die()
+	
+
+func die():
+	$\".\".global_position = $\"../Checkpoint\".global_position
+
+
+func _on_damage_body_entered(body: Node2D) -> void:
+	die()
+
+
+func _on_weak_spot_body_entered(body: Node2D) -> void:
+	$\"../Enemy\".hide()
+	print(\"hit\")
+	$\"../Enemy\".global_position = $\"../The Sayonara Marker\".global_position
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kne1u"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1553747190]
+script = SubResource("GDScript_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352450448]
+shape = SubResource("RectangleShape2D_kne1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=288682758]
+position = Vector2(-4.7683716e-07, 7.6293945e-06)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_xhfnw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1864952603]
+zoom = Vector2(2, 2)
