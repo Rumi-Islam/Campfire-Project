@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bh385f7j3fo23"]
+
+[ext_resource type="Script" uid="uid://bepsn3l8r6qsg" path="res://wire_manager.gd" id="1_i0yl7"]
+
+[node name="WirePuzzle" type="Control" unique_id=2019666264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i0yl7")
+
+[node name="WireManager" type="Control" parent="." unique_id=1321518327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WireBox" type="ColorRect" parent="." unique_id=1440111910]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1161.0
+offset_bottom = 652.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.98039216)
+
+[node name="WireBoxInside" type="ColorRect" parent="." unique_id=1924915428]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 70.0
+offset_right = 1076.0
+offset_bottom = 580.0
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.98039216)
+
+[node name="LeftTerminals" type="VBoxContainer" parent="." unique_id=2031133096]
+layout_mode = 1
+offset_left = -6.0
+offset_top = 71.0
+offset_right = 129.0
+offset_bottom = 584.0
+theme_override_constants/separation = 103
+
+[node name="RedWire" type="ColorRect" parent="LeftTerminals" unique_id=454097445]
+custom_minimum_size = Vector2(135, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0.5294118, 0, 0, 1)
+
+[node name="YellowWire" type="ColorRect" parent="LeftTerminals" unique_id=235828691]
+custom_minimum_size = Vector2(135, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0.5294118, 0.5294118, 0, 1)
+
+[node name="GreenWire" type="ColorRect" parent="LeftTerminals" unique_id=1896824649]
+custom_minimum_size = Vector2(135, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0, 0.5294118, 0, 1)
+
+[node name="BlueWire" type="ColorRect" parent="LeftTerminals" unique_id=922127045]
+custom_minimum_size = Vector2(135, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0, 0, 0.5294118, 1)
+
+[node name="RightTerminals" type="VBoxContainer" parent="." unique_id=1603255367]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = 71.0
+offset_right = 1165.0
+offset_bottom = 580.0
+theme_override_constants/separation = 103
+
+[node name="RedWire" type="ColorRect" parent="RightTerminals" unique_id=2023533364]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+color = Color(0.5294118, 0, 0, 1)
+
+[node name="YellowWire" type="ColorRect" parent="RightTerminals" unique_id=883754747]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+color = Color(0.5294118, 0.5294118, 0, 1)
+
+[node name="GreenWire" type="ColorRect" parent="RightTerminals" unique_id=1222082045]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+color = Color(0, 0.5294118, 0, 1)
+
+[node name="BlueWire" type="ColorRect" parent="RightTerminals" unique_id=1007278910]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+color = Color(0, 0, 0.5294118, 1)
