@@ -1,12 +1,25 @@
 extends CharacterBody2D
 
+@onready var _sprite = $AnimatedSprite2D 
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
 	pass
-	
+
+func _process(_delta):
+	if Input.is_action_pressed("ui_right"):
+		_sprite.play("walk")      # Matches the name in your SpriteFrames
+		_sprite.flip_h = false    # Face right
+	elif Input.is_action_pressed("ui_left"):
+		_sprite.play("walk")
+		_sprite.flip_h = true     # Face left
+	else:
+		_sprite.play("idle")      # Switches back to the idle loop
+
+
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
